@@ -1,7 +1,7 @@
 # Korean Character-level Hate Speech Detection
 
 - **자모 단위**로 한국어 욕설 및 혐오 표현을 탐지하는 모델을 학습하는 코드입니다.         
-- **CNN + GRU** 구조에 기반해 입력 텍스트의 **'hate/clean'** 여부를 판별하는 이진 분류 모델입니다.              
+- **CNN + GRU** 구조에 기반해 입력 텍스트의 **'Hate/Clean'** 여부를 판별하는 이진 분류 모델입니다.              
 
 &nbsp;&nbsp;&nbsp;
 
@@ -65,10 +65,12 @@ class AddVocab:
 - 실험 결과는 다음과 같습니다.
 
 |Metric|Performance|
-|---|---|
+|:---:|:---:|
 |Precision|81.52|
-|Recall|81.56|
-|Accuracy|79.49|
+|Recall|79.49|
+|Accuracy|81.56|
 
 - Hate Speech Detection에서는 모델이 Hate 으로 예측한 샘플 중 실제 Hate 의 비율인 **Precision** 이 중요합니다.
-- Precision이 높다는 것은 모델이 clean 샘플을 잘못 분류하지 않고 Hate 만 정밀하게 찾아냈다는 것을 의미합니다. 
+- Precision이 높다는 것은 모델이 Clean 을 잘못 분류하지 않고 Hate 만 정밀하게 찾아냈다는 것을 의미합니다. 
+
+## 5. Implementation
