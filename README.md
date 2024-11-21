@@ -75,6 +75,7 @@ class AddVocab:
 
 **(1) 데이터 준비**
 - 'text'와 'label' 헤더를 가지는 csv 파일 데이터 셋을 준비합니다.
+- 
 ```python
 text, label
 이 게임을 돈 주고 산 내가 진짜 ㅄ이지ㅋㅋ, 0
@@ -107,5 +108,12 @@ cd train
 sh run_train.sh
 ```
 
-
 **(3) 모델 평가**
+- evaluate 디렉토리의 쉘 스크립트를 실행해 모델을 평가할 수 있습니다.
+- 모델 구조에 관한 하이퍼 파라미터가 학습시와 다를 경우 에러가 발생합니다.
+```
+cd evaluate
+run_evaluate.sh
+``` 
+
+**(4) 추론**
