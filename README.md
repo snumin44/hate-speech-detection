@@ -77,11 +77,15 @@ class AddVocab:
 - 'text'와 'label' 헤더를 가지는 csv 파일 데이터 셋을 준비합니다.
 ```python
 text, label
-
+이 게임을 돈 주고 산 내가 진짜 ㅄ이지ㅋㅋ, 0
 ```
-- csv 파일의 데이터는 다음과 같이 로드됩니다. [\[code\]]()
+- csv 파일의 데이터는 Pandas 라이브러리를 통해 로드됩니다. [\[code\]]()
 ```python
-
+@classmethod
+def load_csv_data(cls, path, sep='\t', remove_jongsung=True, remove_blank=True):
+    #load data
+    datasets = pd.read_csv(path, sep=sep)
+    texts, label = list(datasets['text']), list(datasets['label'])
 ```
 - 특정 초성으로 처리하고 싶은 특수 문자 있다면 다음 코드에 직접 추가하면 됩니다. [\[code\]]()
 ```python
