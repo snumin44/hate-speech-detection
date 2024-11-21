@@ -124,6 +124,7 @@ cd evaluate
 python3 inference.py
 ``` 
 
+<img src="hatespeech.gif" width="480" height="280" alt="Hate Speech Detection (Demo)">
 ## 6. Demo
 - 이상의 모델로 만든 데모는 다음과 같습니다. inference.py 로 동작합니다.
 - **(1) 감탄사, (2) 자신을 향한 욕설**에 해당하는 문장은 필터링하지 않는다는 사실을 확인할 수 있습니다.
