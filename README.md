@@ -51,6 +51,24 @@ class AddVocab:
 &nbsp;&nbsp; (※학습에 사용한 데이터 셋은 제공하지 않습니다.)
 
 ## 4. Performance
+- 학습에 적용한 하이퍼파라미터는 다음과 같습니다.
+  - Embedding Dimension : 100
+  - Number of Kernels : 100
+  - Kernel Sizes : 3, 4, 5
+  - Stride : 1
+  - Hidden Dimension of GRU : 100
+  - Epochs : 30
+  - Dropout : 0.2
+  - Batch Size : 128
+  - Learning Rate : 1e-3
 
+- 실험 결과는 다음과 같습니다.
 
+|Metric|Performance|
+|---|---|
+|Precision|81.52|
+|Recall|81.56|
+|Accuracy|79.49|
 
+- Hate Speech Detection에서는 모델이 Hate 으로 예측한 샘플 중 실제 Hate 의 비율인 **Precision** 이 중요합니다.
+- Precision이 높다는 것은 모델이 clean 샘플을 잘못 분류하지 않고 Hate 만 정밀하게 찾아냈다는 것을 의미합니다. 
