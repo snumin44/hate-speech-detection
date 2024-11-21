@@ -35,13 +35,22 @@ class AddVocab:
 
 ## 3. Dataset 
 - 모델 학습과 평가를 위해 다음 한국어 Hate Speech Detection 데이터 셋을 사용했습니다.
-  - ㅇㅇ
-  - ㅇㅇ
-  - ㅇㅇ
-  - ㅇㅇ
+  - [BEEP!](https://github.com/kocohub/korean-hate-speech)
+  - [욕설 감지 데이터셋](https://github.com/2runo/Curse-detection-data)
+  - [Korean UnSmile Dataset](https://github.com/smilegate-ai/korean_unsmile_dataset)
+  - 개인적으로 수집한 게임 도메인 댓글 등
+
 - 표현의 자유를 보장하기 위해 **(1) 감탄사, (2) 자신을 향한 욕설**에 해당하는 샘플은 레이블을 직접 수정했습니다.
 ```
+(원본) 이 게임을 돈 주고 산 내가 진짜 ㅄ이지ㅋㅋ → Hate Speech 'True'
+(수정) 이 게임을 돈 주고 산 내가 진짜 ㅄ이지ㅋㅋ → Hate Speech 'False'
 ```
-(※학습에 사용한 데이터 셋은 제공하지 않습니다.)
+- 학습, 검증, 테스트에 사용한 샘플의 개수는 다음과 같습니다.
+  - Train : 36,000 / Validation : 2,000 / Test : 2,000
+
+&nbsp;&nbsp; (※학습에 사용한 데이터 셋은 제공하지 않습니다.)
 
 ## 4. Performance
+
+
+
