@@ -7,7 +7,7 @@
 
 ## 1. Model
 - Transformer 기반의 PLM은 실시간의 채팅/댓글을 처리하기에 충분히 빠르지 않을 수 있습니다. 
-- 실시간의 데이터를 빠르게 처리하기 위해 다음과 같이 **CNN + GRU** 구조로 모델을 설계했습니다. [\[code\]]()
+- 실시간의 데이터를 빠르게 처리하기 위해 다음과 같이 **CNN + GRU** 구조로 모델을 설계했습니다. [\[code\]](https://github.com/snumin44/hate-speech-detection/blob/main/src/model.py)
 
 <p align="center">
 <img src="hate_speech_detection_model.PNG" alt="example image" width="500" height="200"/>
