@@ -13,10 +13,19 @@
 <img src="hate_speech_detection_model.PNG" alt="example image" width="500" height="200"/>
 </p>
   
-- 학습 데이터가 충분할 경우, CNN의 층을 늘리거나 GRU를 LSTM으로 대체해 성능을 개선할 수 있습니다.   
+- 학습 데이터가 충분할 경우, CNN 층을 늘리거나 GRU를 LSTM으로 대체해 성능을 개선할 수 있습니다.
 
-## 2. Character-level  
+&nbsp;&nbsp;&nbsp;
+ 
+## 2. Character-level Tokenization  
+- 자모를 이용한 욕설 및 혐오 표현을 탐지하기 위해 **자모 단위**로 토크나이징을 합니다.
+- 한글의 유니코드를 이용해 각 음절에 대응하는 자모를 찾은 후, 기존의 음절을 자모로 대체합니다.  
 
-## 3. Data 
+```python
+
+```
+
+
+## 3. Training Data 
 
 ## 4. Performance
