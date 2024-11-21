@@ -12,10 +12,7 @@
 <p align="center">
 <img src="hate_speech_detection_model.PNG" alt="example image" width="500" height="200"/>
 </p>
-  
-- 학습 데이터가 충분할 경우, CNN 층을 늘리거나 GRU를 LSTM으로 대체해 성능을 개선할 수 있습니다.
-
- 
+   
 ## 2. Character-level Tokenization  
 - 자모를 이용한 욕설 및 혐오 표현을 탐지하기 위해 **자모 단위**로 토크나이징을 합니다.
 - 한글의 유니코드를 이용해 각 음절에 대응하는 자모를 찾은 후, 기존의 음절을 자모로 대체합니다. [\[code\]]()
@@ -72,5 +69,32 @@ class AddVocab:
 
 - Hate Speech Detection에서는 모델이 Hate 으로 예측한 샘플 중 실제 Hate 의 비율인 **Precision** 이 중요합니다.
 - Precision이 높다는 것은 모델이 Clean 을 잘못 분류하지 않고 Hate 만 정밀하게 찾아냈다는 것을 의미합니다. 
+- 학습 데이터가 충분할 경우, CNN 층을 늘리거나 GRU를 LSTM으로 대체해 성능을 개선할 수 있습니다.
 
 ## 5. Implementation
+
+**(1) 데이터 준비**
+- 'text'와 'label' 헤더를 가지는 csv 파일 데이터 셋을 준비합니다.
+```python
+text, label
+
+```
+- csv 파일의 데이터는 다음과 같이 로드됩니다. [\[code\]]()
+```python
+
+```
+- 특정 초성으로 처리하고 싶은 특수 문자 있다면 다음 코드에 직접 추가하면 됩니다. [\[code\]]()
+```python
+# 형태가 유사한 특수문자를 각 초성과 동일한 숫자로 인코딩 
+class AddVocab:
+    CHOSUNG = { ...
+        'ㄹ':['㉣','㈃', '己'],
+        'ㅁ':['㉤','㈄','口'],
+        'ㅂ':['㉥','㈅','廿'],
+        'ㅅ':['㉦','㈆', '人'], 
+    ... }
+```
+
+**(2) 모델 학습**
+
+**(3) 모델 평가**
